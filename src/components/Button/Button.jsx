@@ -1,16 +1,16 @@
-
+import './Button.css';
 import PropTypes from 'prop-types';
-import styles from './Button.module.scss';
 
-export const Button = ({ children, onClick }) => {
+export const Button = ({ onClick }) => {
   return (
-    <button type="button" className={styles["Btn"]} onClick={onClick} aria-label="Load more">
-      {children}
-    </button>
+    <>
+      <button className="button" type="button" onClick={onClick}>
+        Load more
+      </button>
+    </>
   );
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
   onClick: PropTypes.func.isRequired,
 };
